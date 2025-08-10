@@ -46,9 +46,10 @@
     "typescript": "~5.6.3"
   },
   "scripts": {
-	  "start": "ng serve",
-	  "build": "ng build",
-	  "build:docs": "ng build --configuration production"
+    "start": "ng serve",
+    "build": "ng build",
+    "build:docs": "ng build --configuration production",
+    "build:pages": "ng build --configuration production --base-href='/painel_admin_guild/' && type nul > docs/.nojekyll"
 	}
 
 }
