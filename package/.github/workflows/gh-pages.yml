@@ -25,11 +25,10 @@ jobs:
         run: npm run build:pages
         working-directory: ./package
 
-      - name: Deploy to GitHub Pages (docs folder)
+      - name: Deploy to GitHub Pages (gh-pages branch)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./package/docs
-          publish_branch: main
-          keep_files: true
-          allow_empty_commit: true
+          publish_branch: gh-pages
+          force_orphan: true
